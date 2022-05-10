@@ -1,0 +1,22 @@
+body {
+    background-color: #c7cccf;
+}
+
+.code {
+    font-size: 13rem;
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    color: darkred;
+}
+
+.message {
+    display: flex;
+    margin-top: 3%;
+    font-size: 2rem;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+}

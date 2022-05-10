@@ -1,0 +1,188 @@
+.main-row {
+    display: flex;
+    background-size: 100% 98vh;
+    background-repeat: no-repeat;
+    background-image: url("../img/back.png");
+}
+
+.footer {
+    width: 100%;
+    padding: 0.5rem 0.5rem 1rem 1rem;
+    background-color: #432B3B;
+    color: #eee;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    padding-left: 1rem;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #814343;
+}
+
+h1 {
+    color: #eee;
+}
+
+.count {
+    float: right;
+    color: red;
+    text-align: end;
+}
+
+.picture {
+    display: flex;
+    margin-top: 10%;
+    height: 45%;
+    overflow: hidden;
+}
+
+img {
+    width: auto;
+    margin: 0 auto;
+}
+
+.button:hover {
+    color: #432B3B;
+    background-color: #9b9a9b;
+}
+
+.icon-group {
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.icon {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.form-text {
+    color: red;
+}
+
+.chat, .trash, .edit:hover {
+    cursor: pointer;
+}
+
+.chat, .edit, .trash {
+    margin-left: 1rem;
+    float: right;
+}
+
+.round-small {
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    border-radius: 50%;
+    float: left;
+    margin-right: 1%;
+}
+
+.name {
+    margin-left: 2%;
+    margin-right: 40%;
+    font-size: 1.3rem;
+}
+
+.round {
+    width: 9rem;
+    height: 9rem;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.avatar {
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.success {
+    font-size: 1.5rem;
+    color: green;
+    text-align: end;
+}
+
+.dropbtn {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 140px;
+    padding: 4px;
+}
+
+.dropbtn {
+    padding-right: 2em;
+    color: white;
+    width: 40px;
+}
+
+.dropbtn::after {
+    content: "";
+    height: 16px;
+    position: absolute;
+    right: 0;
+    top: 7px;
+    width: 16px;
+    padding: 4px;
+}
+
+.dropdown-content a:first-child {
+    background: url('http://icons.iconarchive.com/icons/custom-icon-design/flag-3/16/Russia-Flag-icon.png') no-repeat left center;
+}
+
+.dropdown-content a:last-child {
+    background: url('https://icons.iconarchive.com/icons/fatcow/farm-fresh/16/flag-usa-icon.png') no-repeat left center;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 2px 0 2px 25px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.app-name{
+    color: white;
+}
+
+@media (max-width: 600px) {
+    body {
+        width: fit-content;
+    }
+
+    .header {
+        height: 3rem;
+    }
+}
