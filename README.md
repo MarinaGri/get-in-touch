@@ -12,4 +12,4 @@
 
 ![Scheme BD](img/scheme.jpg)
 
-[Website on heroku](https://get-in-touch.herokuapp.com)
+[Website on heroku](https://get-in-touch.herokuapp.com/app/)
