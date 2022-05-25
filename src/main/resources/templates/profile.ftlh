@@ -17,14 +17,14 @@
 
     </div>
     <div class="posts">
-        <form class="post-form" method="post">
+        <div class="post-form">
             <input type="hidden" id="user-id" value="${user.id}">
             <@form.input 'form.title' 'form.input.title' 'text' 'required' '255'/>
             <span class="form-text" id="error"></span>
             <@form.textarea 'form.text' 'form.textarea.post'/>
             <input type="hidden" id="csrf" name="${_csrf.parameterName}" value="${_csrf.token}">
             <button type="button" id="btn" class="button"><@spring.message 'button.post'/></button>
-        </form>
+        </div>
         <div id="posts">
             <#list posts as post>
                 <div class="post" id="${post.id}">

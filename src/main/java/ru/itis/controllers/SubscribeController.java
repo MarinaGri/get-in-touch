@@ -1,7 +1,6 @@
 package ru.itis.controllers;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -21,18 +20,18 @@ public class SubscribeController {
 
     @PreAuthorize("isAuthenticated()")
     @PatchMapping("/subscribe/{user-id}")
-    public ResponseEntity<Object> subscribe(@AuthenticationPrincipal UserDetailsImpl details,
+    public ResponseEntity<?> subscribe(@AuthenticationPrincipal UserDetailsImpl details,
                                             @PathVariable("user-id") UUID userId) {
         subscribeService.subscribe(details.getUser().getId(), userId);
-        return new ResponseEntity<>(HttpStatus.ACCEPTED);
+        return ResponseEntity.accepted().build();
     }
 
     @PreAuthorize("isAuthenticated()")
     @PatchMapping("/unsubscribe/{user-id}")
-    public ResponseEntity<Object> unsubscribe(@AuthenticationPrincipal UserDetailsImpl details,
+    public ResponseEntity<?> unsubscribe(@AuthenticationPrincipal UserDetailsImpl details,
                                               @PathVariable("user-id") UUID userId) {
         subscribeService.unsubscribe(details.getUser().getId(), userId);
-        return new ResponseEntity<>(HttpStatus.ACCEPTED);
+        return ResponseEntity.accepted().build();
     }
 
     @PreAuthorize("isAuthenticated()")

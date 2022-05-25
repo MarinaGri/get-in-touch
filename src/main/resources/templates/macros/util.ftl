@@ -15,7 +15,6 @@
     <link rel="stylesheet" type="text/css" href="${springMacroRequestContext.contextPath}/${css}"/>
     <link rel="stylesheet" type="text/css" href="${springMacroRequestContext.contextPath}/css/main.css"/>
 
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>ctx = "${springMacroRequestContext.contextPath}"</script>
     <#if listJs?has_content>
         <#list listJs as path>

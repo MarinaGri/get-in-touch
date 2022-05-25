@@ -16,7 +16,7 @@
     <a href="<@spring.url'/signUp'/>">
         <button class="button"><@spring.message 'button.sign-up'/></button>
     </a>
-    <a href="https://oauth.vk.com/authorize?client_id=8163083&redirect_uri=http://localhost/sem/oauth&response_type=code&scope=email&v=5.131">
+    <a href="https://oauth.vk.com/authorize?client_id=8163083&redirect_uri=http://localhost/app/oauth&response_type=code&scope=email&v=5.131">
         <button class="button"><@spring.message 'button.sign-in-with'/> VK</button>
     </a>
 </@layout.entrance>

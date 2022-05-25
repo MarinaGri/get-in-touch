@@ -28,6 +28,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final OAuthAuthenticationProvider oauthAuthenticationProvider;
 
+    private final int MONTH_IN_SEC = 60 * 60 * 24 * 30;
+
     @Autowired
     private DataSource dataSource;
 
@@ -50,7 +52,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .rememberMe()
                 .rememberMeParameter("rememberMe")
                 .tokenRepository(tokenRepository())
-                .tokenValiditySeconds(60 * 60 * 24 * 365)
+                .tokenValiditySeconds(MONTH_IN_SEC)
                 .and()
             .authorizeRequests()
                 .anyRequest().permitAll()
@@ -72,6 +74,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
             .csrf()
                 .ignoringAntMatchers("/users/**")
+                .ignoringAntMatchers("/skills/**")
                 .and()
             .addFilterBefore(new OAuthAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
 

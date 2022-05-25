@@ -1,6 +1,7 @@
 package ru.itis.controllers;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -31,6 +32,7 @@ public class SignUpController {
         return "sign_up";
     }
 
+    @PreAuthorize("isAnonymous()")
     @PostMapping("/signUp")
     public String signUp(@ModelAttribute("form") @Valid SignUpForm form, BindingResult result, ModelMap map) {
         if (result.hasErrors()) {
@@ -41,7 +43,7 @@ public class SignUpController {
             signUpService.signUp(form);
         } catch (DuplicateEmailException ex) {
             map.put("form", form);
-            result.rejectValue("email", "error.email.duplicate" );
+            result.rejectValue("email", "error.email.duplicate");
             return "sign_up";
         }
         return "redirect:/signIn";

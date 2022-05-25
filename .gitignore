@@ -1,4 +1,6 @@
 application.properties
+
+log4j.properties
 *.log
 
 HELP.md

@@ -51,7 +51,6 @@ public class OAuthHelperImpl implements OAuthHelper {
             Gson gson = new Gson();
             Response response = call.execute();
             String jsonString = Objects.requireNonNull(response.body()).string();
-            System.out.println(jsonString);
             JsonObject jsonObj = gson.fromJson(jsonString, JsonObject.class);
             JsonArray jsonArray = gson.fromJson(jsonObj.get("response"), JsonArray.class);
             return gson.fromJson(jsonArray.get(0), VkUserDto.class);
@@ -76,7 +75,6 @@ public class OAuthHelperImpl implements OAuthHelper {
             Response response = call.execute();
 
             String str = Objects.requireNonNull(response.body()).string();
-            System.out.println(str);
 
             return gson.fromJson(str, VkTokenDto.class);
         } catch (IOException ex) {

@@ -15,7 +15,7 @@ spring.jpa.properties.hibernate.enable_lazy_load_no_trans=true
 spring.servlet.multipart.max-file-size=50MB
 spring.servlet.multipart.max-request-size=50MB
 
-server.servlet.context-path=/sem
+server.servlet.context-path=/app
 
 server.error.include-message=always
 
@@ -26,10 +26,6 @@ app.remember-me.key=
 
 files.storage.path=
 
-logging.file.name=app.log
-logging.file.path=
-
-logging.pattern.file=%d{yyyy-dd-MM HH:mm:ss} [%t] %-5level %logger{36} - %msg%n
 
 url.hh-ru.vacancies=https://api.hh.ru/vacancies?
 
@@ -37,5 +33,5 @@ oauth.vk.request-url.access-token=https://oauth.vk.com/access_token
 oauth.vk.request-url.method=https://api.vk.com/method/
 oauth.vk.client-id=
 oauth.vk.client-secret=
-oauth.vk.redirect-url=http://localhost/sem/oauth
+oauth.vk.redirect-url=http://localhost/app/oauth
 oauth.vk.version=5.131

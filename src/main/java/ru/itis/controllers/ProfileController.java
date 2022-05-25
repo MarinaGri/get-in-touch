@@ -50,7 +50,7 @@ public class ProfileController {
 
     @PreAuthorize("isAuthenticated()")
     @DeleteMapping("/delete")
-    public ResponseEntity<?> deleteAccount(@AuthenticationPrincipal UserDetailsImpl details){
+    public ResponseEntity<?> deleteAccount(@AuthenticationPrincipal UserDetailsImpl details) {
         usersService.delete(details.getUser().getId());
         return ResponseEntity.accepted().build();
     }
