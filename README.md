@@ -8,7 +8,7 @@
 * Subscribing to users
 * Authorization via VK is available
 
-### Scheme BD:
+### Database schema:
 
 ![Scheme BD](img/scheme.jpg)
 
